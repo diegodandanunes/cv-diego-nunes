@@ -1,11 +1,16 @@
 <script setup>
-import Background from "./components/Background.vue";
 </script>
 
 <template>
-<Background></Background>
+<div>
+  <span>hello world</span>
+</div>
 </template>
 
 <style scoped lang="scss">
-
+div {
+  span {
+    color: green
+  }
+}
 </style>
