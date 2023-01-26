@@ -1,5 +1,9 @@
 <script setup>
-
+import { storeToRefs } from 'pinia';
+import { useTeste } from '../stores/counter'
+const teste = useTeste()
+const { jobs } = storeToRefs(teste)
+console.log(jobs.value)
 </script>
 
 <template>

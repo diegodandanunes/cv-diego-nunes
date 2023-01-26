@@ -10,3 +10,16 @@ export const useCounterStore = defineStore("counter", () => {
 
   return { count, doubleCount, increment };
 });
+
+
+export const useTeste = defineStore("store", {
+  state: () => ({
+    jobs: [
+      {
+        job: "zenvia",
+        description: "sofrimento",
+        data: "21/21/21 - 21/21/21"
+      }
+    ]
+  })
+})
