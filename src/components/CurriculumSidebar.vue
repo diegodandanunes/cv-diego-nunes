@@ -3,7 +3,7 @@ import Title from '../components/Title.vue'
 </script>
 
 <template>
-  <div class="curriculum-sidebar__wrapper has-background-grey-darkest is-flex">
+  <div class="curriculum-sidebar__wrapper  has-background-grey-darkest is-flex">
     <div class="curriculum-sidebar__image mt-3">
       <img src="../assets/images/diego.png" alt="Diego Nunes">
     </div>
@@ -17,7 +17,7 @@ import Title from '../components/Title.vue'
 <style scoped lang="scss">
 .curriculum-sidebar__wrapper {
   width: 35%;
-  height: 90vh;
+  height: 97vh;
   align-items: center;
   flex-flow: column;
 }
@@ -32,5 +32,9 @@ import Title from '../components/Title.vue'
     border: 1px solid white;
     padding: 10px;
   }
+}
+
+.curriculum-sidebar__sections-wrapper {
+  width: 80%;
 }
 </style>
