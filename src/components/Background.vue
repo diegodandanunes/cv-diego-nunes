@@ -13,7 +13,7 @@
 .background__wrapper {
   min-height: 100vh;
   width: 100%;
-  background-image: url('../assets/images/bg.png');
+  background-image: url('../assets/images/bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

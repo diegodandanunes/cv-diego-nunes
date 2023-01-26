@@ -5,11 +5,11 @@ import Title from '../components/Title.vue'
 <template>
   <div class="curriculum-sidebar__wrapper  has-background-grey-darkest is-flex">
     <div class="curriculum-sidebar__image mt-3">
-      <img src="../assets/images/diego.png" alt="Diego Nunes">
+      <img src="../assets/images/diego.jpg" alt="Diego Nunes">
     </div>
     <div class="mt-5"></div>
     <div class="curriculum-sidebar__sections-wrapper">
-      <Title :inverted="true" :title="'Educação'" /> 
+      <Title :inverted="true" :title="'Educação'"></Title>
     </div>
   </div>
 </template>

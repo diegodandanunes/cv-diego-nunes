@@ -16,7 +16,7 @@
 .about__wrapper {
   height: 50px;
   position: fixed;
-  top: 21vh;
+  top: 180px;
   overflow: hidden;
   gap: 12px;
 }
