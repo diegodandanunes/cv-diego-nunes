@@ -1,15 +1,15 @@
 <script setup>
-
+import Title from '../components/Title.vue'
 </script>
 
 <template>
-  <div class="curriculum-sidebar__wrapper has-background-dark-dark is-flex">
+  <div class="curriculum-sidebar__wrapper has-background-grey-darkest is-flex">
     <div class="curriculum-sidebar__image mt-3">
       <img src="../assets/images/diego.png" alt="Diego Nunes">
     </div>
-    <div class="curriculum-sidebar__spacer"></div>
+    <div class="mt-5"></div>
     <div class="curriculum-sidebar__sections-wrapper">
-      <span style="color: white">...</span>
+      <Title :inverted="true" :title="'Educação'" /> 
     </div>
   </div>
 </template>
@@ -23,7 +23,8 @@
 }
 
 .curriculum-sidebar__image {
-  width: 55%;
+  width: 120px;
+  height: 150px;
 
   img {
     width: 100%;

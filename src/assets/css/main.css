@@ -1,4 +1,20 @@
-@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.cv-main-color-text {
+  color: #dba066;
+}
+
+.cv-main-color-bg {
+  background-color: #dba066;
+}
+
+.card-width {
+  width: 75%;
+  max-width: 750px;
+}
+
+/* @import './base.css';
+
 
 #app {
   max-width: 1280px;
@@ -32,4 +48,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
