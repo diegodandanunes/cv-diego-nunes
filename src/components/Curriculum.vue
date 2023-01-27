@@ -16,14 +16,13 @@
 
 <style scoped lang="scss">
 .curriculum__wrapper {
-  // min-height: 97vh;
-  // overflow-y: auto;
   margin: 20px 0 20px 0;
   background: rgb(240,240,240);
   background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(255,255,255,1) 50%, rgba(208,208,208,1) 100%);
   -webkit-box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
   -moz-box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
   box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
+  animation: 2s ease-out fadeIn;
 
   @media (max-width: 767px){
     display: none;

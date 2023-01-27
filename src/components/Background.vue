@@ -11,6 +11,7 @@
 
 <style scoped lang="scss">
 .background__wrapper {
+  animation: .5s ease-out fadeIn;
   min-height: 100vh;
   width: 100%;
   background-image: url('../assets/images/bg.jpg');

@@ -34,7 +34,7 @@ const { jobs, profile } = storeToRefs(mainStore)
         <div class="curriculum-content__experiences--title">
           <b><span class="has-text-body is-block">{{ job.position }}</span></b>
           <p class="curriculum-content__experiences--company mb-1">
-            <b><span>{{ job.company }}</span></b> | <span>{{ job.date }}</span> | <span class="curriculum-content__experiences--title has-text-weight-bold" v-if="job.remote">Remoto</span>
+            <b><span>{{ job.company }}</span></b> | <span>{{ job.date }}</span><span class="curriculum-content__experiences--title has-text-weight-bold" v-if="job.remote"> |  Remoto</span>
           </p>
         </div>
         <div class="curriculum-content__experience--title">
