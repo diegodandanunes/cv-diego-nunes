@@ -1,5 +1,13 @@
 <script setup>
 import Title from "../components/Title.vue";
+
+import { storeToRefs } from 'pinia';
+import { useMainStore } from '../stores/main'
+const mainStore = useMainStore()
+const { jobs, profile } = storeToRefs(mainStore)
+
+
+
 </script>
 
 <template>
@@ -11,14 +19,24 @@ import Title from "../components/Title.vue";
       </div>
     </div>
     <div class="mt-5"></div>
-    <Title title="Profile" />
-    <p>
-      Desenvolvedor de front-end e UI formado na PUCRS. Encontro soluções usando
-      minha expertise de Desenvolvimento Front End, aliado à minha experiência
-      com design de UI, utilizando as tecnologias e frameworks mais importantes
-      do mercado. <br> Larga experiência com Design System e experiência com back end
-      e desenvolvimento de API.
-    </p>
+    <Title title="Perfil" />
+    <p class="mb-1" v-for="(paragraph, i) in profile" :key="i">{{ paragraph }}</p>
+
+    <div class="curriculum-content__experiences mt-3">
+      <Title title="Experiência" />
+      <div class="curriculum-content__experience mb-3" v-for="(job, i) in jobs" :key="i">
+        <div class="curriculum-content__experiences--title">
+          <b><span class="has-text-body is-block">{{ job.position }}</span></b>
+          <p class="curriculum-content__experiences--company mb-1">
+            <b><span>{{ job.company }}</span></b> | <span>{{ job.date }}</span> | <span class="curriculum-content__experiences--title has-text-weight-bold" v-if="job.remote">Remoto</span>
+          </p>
+        </div>
+        <div class="curriculum-content__experience--title">
+          <p class="mb-1" v-for="(paragraph, i) in job.description" :key="i">{{ paragraph }}</p>
+          <b>Skills</b> <span class="curriculum-content__experience--skills" v-for="(skill, i) in job.skills" :key="i">{{ skill }} <span v-if="i !== job.skills.length - 1"> ◦ </span></span>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -45,7 +63,17 @@ import Title from "../components/Title.vue";
 }
 
 p {
-  font-size: 12px;
   width: 90%
+}
+
+.curriculum-content__experiences {
+  &--company {
+    border-bottom: 2px solid #dbdbe3;
+    padding-bottom: 10px;
+  }
+}
+
+.curriculum-content__experience--skills {
+  font-size: 14px;
 }
 </style>

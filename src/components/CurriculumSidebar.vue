@@ -23,18 +23,18 @@ const { education, skills, courses } = storeToRefs(mainStore)
         </div>
       </div>
     </div>
-    <div class="curriculum-sidebar__skills mt-1">
+    <div class="curriculum-sidebar__skills mt-3">
       <Title :inverted="true" :title="'Main skills'"></Title>
-      <div class="curriculum-sidebar__skill mb-2 pb-3">
-        <p v-for="(skill, i) in skills" :key="i">{{skill}}</p>
+      <div class="curriculum-sidebar__skill pb-3">
+        <p class="mb-1" v-for="(skill, i) in skills" :key="i">{{skill}}</p>
       </div>
     </div>
-    <div class="curriculum-sidebar__sections">
+    <div class="curriculum-sidebar__sections mt-3">
       <Title :inverted="true" :title="'Cursos'"></Title>
       <div class="curriculum-sidebar__education">
         <div class="curriculum-sidebar__education-item mb-1 pb-3" v-for="(course, i) in courses" :key="i">
-          <p class="curriculum-sidebar__education-date">{{ course.name }}</p>
-          <b><p class="curriculum-sidebar__education-name">{{ course.institution }}</p></b>
+          <b><p class="curriculum-sidebar__education-date">{{ course.name }}</p></b>
+          <p class="curriculum-sidebar__education-name">{{ course.institution }}</p>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ const { education, skills, courses } = storeToRefs(mainStore)
 <style scoped lang="scss">
 .curriculum-sidebar__wrapper {
   width: 35%;
-  height: 100%;
+  // height: 100%;
   align-items: center;
   flex-flow: column;
 }
@@ -64,10 +64,6 @@ const { education, skills, courses } = storeToRefs(mainStore)
 .curriculum-sidebar__sections, .curriculum-sidebar__skills, .curriculum-sidebar__courses{
   width: 80%;
   color: #fff;
-  font-size: 14px;
-  b {
-    font-size: 14px;
-  }
 }
 
 .curriculum-sidebar__education {
@@ -76,7 +72,7 @@ const { education, skills, courses } = storeToRefs(mainStore)
   }
 
   &-date {
-    font-size: 11px;
+    font-size: 14px;
   }
 }
 </style>
