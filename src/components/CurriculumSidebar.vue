@@ -1,5 +1,10 @@
 <script setup>
-import Title from '../components/Title.vue'
+import Title from '../components/Title.vue';
+
+import { storeToRefs } from 'pinia';
+import { useMainStore } from '../stores/main'
+const mainStore = useMainStore()
+const { education, skills, courses } = storeToRefs(mainStore)
 </script>
 
 <template>
@@ -8,8 +13,30 @@ import Title from '../components/Title.vue'
       <img src="../assets/images/diego.jpg" alt="Diego Nunes">
     </div>
     <div class="mt-5"></div>
-    <div class="curriculum-sidebar__sections-wrapper">
+    <div class="curriculum-sidebar__sections">
       <Title :inverted="true" :title="'Educação'"></Title>
+      <div class="curriculum-sidebar__education">
+        <div class="curriculum-sidebar__education-item mb-1 pb-3" v-for="(formation, i) in education" :key="i">
+          <p class="curriculum-sidebar__education-date">{{ formation.date }}</p>
+          <b><p class="curriculum-sidebar__education-name">{{ formation.name }}</p></b>
+          <p class="curriculum-sidebar__education-degree">{{ formation.degree }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="curriculum-sidebar__skills mt-1">
+      <Title :inverted="true" :title="'Main skills'"></Title>
+      <div class="curriculum-sidebar__skill mb-2 pb-3">
+        <p v-for="(skill, i) in skills" :key="i">{{skill}}</p>
+      </div>
+    </div>
+    <div class="curriculum-sidebar__sections">
+      <Title :inverted="true" :title="'Cursos'"></Title>
+      <div class="curriculum-sidebar__education">
+        <div class="curriculum-sidebar__education-item mb-1 pb-3" v-for="(course, i) in courses" :key="i">
+          <p class="curriculum-sidebar__education-date">{{ course.name }}</p>
+          <b><p class="curriculum-sidebar__education-name">{{ course.institution }}</p></b>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -17,7 +44,7 @@ import Title from '../components/Title.vue'
 <style scoped lang="scss">
 .curriculum-sidebar__wrapper {
   width: 35%;
-  height: 97vh;
+  height: 100%;
   align-items: center;
   flex-flow: column;
 }
@@ -34,7 +61,22 @@ import Title from '../components/Title.vue'
   }
 }
 
-.curriculum-sidebar__sections-wrapper {
+.curriculum-sidebar__sections, .curriculum-sidebar__skills, .curriculum-sidebar__courses{
   width: 80%;
+  color: #fff;
+  font-size: 14px;
+  b {
+    font-size: 14px;
+  }
+}
+
+.curriculum-sidebar__education {
+  &-item:not(:last-child) {
+    border-bottom: 1px solid #444452;
+  }
+
+  &-date {
+    font-size: 11px;
+  }
 }
 </style>

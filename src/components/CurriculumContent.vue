@@ -5,7 +5,7 @@ import Title from "../components/Title.vue";
 <template>
   <div class="curriculum-content__wrapper ml-3">
     <div class="curriculum-content__name-wrapper mt-3">
-      <div class="curriculum-content__name title is-1 m-0">Diego Nunes</div>
+      <div class="curriculum-content__name title is-1 m-0 bebas-spacing">Diego Nunes</div>
       <div class="curriculum-content__position has-text-caption">
         Front End Developer
       </div>

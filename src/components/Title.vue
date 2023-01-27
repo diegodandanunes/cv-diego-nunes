@@ -9,7 +9,7 @@ const props =  defineProps({
 
 <template>
   <div class="title__border" :class="{'has-background-white': props.inverted}"></div>
-  <h3 class="title__text" :class="{'cv-main-color-text': props.inverted}">{{props.title}}</h3>
+  <h3 class="title__text bebas-spacing mb-1" :class="{'cv-main-color-text': props.inverted}">{{props.title}}</h3>
 </template>
 
 <style scoped lang="scss">

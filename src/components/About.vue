@@ -15,8 +15,8 @@
 <style lang="scss" scoped>
 .about__wrapper {
   height: 50px;
-  position: fixed;
-  top: 180px;
+  position: absolute;
+  top: 172px;
   overflow: hidden;
   gap: 12px;
 }

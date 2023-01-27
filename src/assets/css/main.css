@@ -13,6 +13,10 @@
   max-width: 750px;
 }
 
+.bebas-spacing {
+  letter-spacing: 5px;
+}
+
 /* @import './base.css';
 
 
