@@ -16,6 +16,12 @@ const { jobs, profile } = storeToRefs(mainStore)
       <div class="curriculum-content__name title is-1 m-0 bebas-spacing">Diego Nunes</div>
       <div class="curriculum-content__position has-text-caption">
         Front End Developer
+        <p>
+          <a href="https://www.linkedin.com/in/diegodandanunes/" target="_blank" rel="noopener noreferrer">
+            <i class="pt-1 fa fa-linkedin" aria-hidden="true"></i>
+            <span>Linkedin</span>
+        </a>
+        </p>
       </div>
     </div>
     <div class="mt-5"></div>
@@ -60,6 +66,17 @@ const { jobs, profile } = storeToRefs(mainStore)
   font-size: 0.8rem;
   font-weight: bold;
   margin-top: -12px;
+}
+
+a span{
+  margin-left: 5px;
+  margin-top: 5px;
+  text-transform: none;
+}
+
+a i {
+  font-size: 18px;
+  
 }
 
 p {

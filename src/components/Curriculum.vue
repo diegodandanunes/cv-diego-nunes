@@ -9,6 +9,9 @@
       <slot name="content"></slot>
     </div>
   </div>
+  <div class="curriculum__wrapper__mobile is-flex justify-center align-center">
+    Para melhor visualização, por favor acesse por um dispositivo com tela maior.
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -21,5 +24,23 @@
   -webkit-box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
   -moz-box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
   box-shadow: 10px 10px 11px -1px rgba(0,0,0,0.25);
+
+  @media (max-width: 767px){
+    display: none;
+  }
+}
+
+.curriculum__wrapper__mobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.70);
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 5rem;
+  line-height: 40px;
+
+  @media (min-width: 767px){
+    display: none !important;
+  }
 }
 </style>
