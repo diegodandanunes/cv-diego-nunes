@@ -1,7 +1,29 @@
 <script setup>
+import { ref } from 'vue';
+
+let height = ref(0)
+
+addEventListener("scroll", (event) => {});
+
+onscroll = (event) => {
+  // console.log(event)
+  console.clear()
+  // let teste = document.getElementsByTagName('body')[0].clientHeight
+  // console.log(teste)
+  // console.log(window.scrollY)
+
+  height.value = window.scrollY;
+
+  console.log('ref', height.value)
+
+};
 </script>
 
 <template>
+  <div class="teste">
+    <span v-if="height >= 0 && height < 500">baixo</span>
+    <span v-if="height <= 740 && height > 500">cima</span>
+  </div>
   <div class="curriculum__wrapper card-width">
     <div class="curriculum__content is-flex">
       <slot name="sidebar"></slot>
@@ -15,6 +37,14 @@
 </template>
 
 <style scoped lang="scss">
+.teste {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  position: fixed;
+  top: 40%;
+  left: 20%;
+}
 .curriculum__wrapper {
   margin: 20px 0 20px 0;
   background: rgb(240,240,240);
