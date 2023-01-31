@@ -1,8 +1,12 @@
-import { ref, computed } from "vue";
 import { defineStore } from "pinia";
 
 export const useMainStore = defineStore("mainStore", {
   state: () => ({
+    name: "Diego Nunes",
+    position: "Front End Developer",
+    phone: "(51) 99286-3986",
+    city: "Porto Alegre, Brasil",
+    email: "diegodandanunes@gmail.com",
     jobs: [
       {
         company: "Zenvia Mobile",
@@ -61,19 +65,19 @@ export const useMainStore = defineStore("mainStore", {
     courses: [
       {
         name: "Web Development Course",
-        institution: "Udemy" 
+        institution: "Udemy"
       },
       {
         name: "NodeJS Course",
-        institution: "TreinaWeb" 
+        institution: "TreinaWeb"
       },
       {
         name: "MongoDB Complete Course",
-        institution: "Udemy" 
+        institution: "Udemy"
       },
       {
         name: "Formação Design Gráfico",
-        institution: "Alfamídia" 
+        institution: "Alfamídia"
       }
     ],
     profile: ["Desenvolvedor de front-end e UI formado na PUCRS. Encontro soluções usando minha expertise de Desenvolvimento Front End, aliado à minha experiência com design de UI, utilizando as tecnologias e frameworks mais importantes do mercado.", "Larga experiência com Design System e experiência com back end e desenvolvimento de API."]
